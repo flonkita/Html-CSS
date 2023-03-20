@@ -1,0 +1,525 @@
+/* ............................................. */
+/* .............  GENERAL SETTINGS ............. */
+/* ............................................. */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Satisfy&display=swap');
+
+:root {
+    --text-color: #252525;
+    --link-color: #252525;
+    --bg-color: #f5f5f5;
+    --main-color: #008080;
+    --icon-color: #008080;
+    --mid-light: rgba(245, 245, 245, .9);
+    --main-police: 'Playfair Display', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: var(--main-police);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+p,
+address,
+input,
+label {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.notOnMobile {
+    display: none;
+}
+
+i {
+    color: var(--icon-color)
+}
+/* TOUTES LES MISES EN PAGE QUI SUIVENT SONT CELLES SUR MOBILE */
+/* les mises en page des écrans plu grands sont dans les medias queries qui suivent */
+
+/* ............................................. */
+/* ................  HEADER  ................... */
+/* ............................................. */
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 1em 0;
+    font-size: 1.8rem;
+    background-color: var(--mid-light);
+    border-bottom: 1.5px solid var(--text-color);
+}
+
+header a {
+    color: var(--link-color);
+}
+
+header a:hover {
+    color: var(--main-color)
+}
+
+.header-logo img {
+    display: none;
+}
+
+header nav {
+    text-align: center;
+}
+
+/* le lien de la page sur laquelle on se trouve */
+header nav a[href="#"] {
+    color: var(--main-color);
+}
+
+
+/* ............................................. */
+/* .................  MAIN  ................... */
+/* ............................................. */
+
+main {
+    padding: 15em 2em 0;
+    text-align: justify;
+}
+
+main h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 3.5em;
+    font-weight: normal;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.main-pic {
+    max-width: 90%;
+    display: block;
+    margin: 6em auto;
+}
+
+.background-pic:first-of-type {
+    background-image: url('./img/writer_pc.jpg');
+}
+
+.background-pic:last-of-type {
+    background-image: url('./img/writer_hand.jpg');
+}
+
+.background-pic {
+    background-attachment: fixed;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+}
+
+
+/* le container des 3 icônes en milieu de page */
+.tricks {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 5rem 0;
+}
+
+.tricks i {
+    font-size: clamp(4rem, 10vw, 5rem);
+    border: 4px solid var(--text-color);
+    border-radius: 100%;
+    /* créer un carré pour créer le cercle autour de chaque icône */
+    width: clamp(10rem, 20vw, 15rem);
+    height: clamp(10rem, 20vw, 15rem);
+    /* centrer les icônes au milieu des cercles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ............................................. */
+/* ...............  ARTICLES  .................. */
+/* ............................................. */
+
+
+.blogs {
+    max-width: 90%;
+    margin: 4em auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.blogs article {
+    margin: 0.3rem auto 2.5rem;
+    max-width: 90%;
+}
+
+
+article h2 {
+    text-align: center;
+    font-size: 2.2em;
+    letter-spacing: 2.5px
+}
+
+.blog-img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+article h3 {
+    text-align: right;
+}
+
+article p {
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+
+/* ............................................. */
+/* .................  FORM  .................... */
+/* ............................................. */
+
+
+form {
+    min-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+
+form label {
+    margin-bottom: 0.3em;
+}
+
+form input {
+    margin-bottom: 1.6em;
+    padding: 0.6em 0.4em;
+    font-family: var(--main-police);
+}
+
+textarea {
+    resize: vertical;  /* pour ne pouvoir l'agrandir qu'à la verticale */ 
+    font-size: 1em;
+    font-family: var(--main-police);
+    margin-bottom: 1.6em;
+    min-height: 8em;
+}
+
+button[type="submit"] {
+    padding: 0.6em 1em;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    border-radius: 0.3em;
+    border: none;
+    background-color: var(--main-color);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+
+/* ............................................. */
+/* .................  ABOUT  ................... */
+/* ............................................. */
+
+h1+.about {
+    margin-top: 6em;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about p {
+    padding: 1.5em;
+    max-height: 20em;
+    overflow: hidden;
+}
+
+
+
+/* ............................................. */
+/* ................  FOOTER  ................... */
+/* ............................................. */
+
+/* le 1er bloc du footer (avant le trait horizontal) */
+footer .main-infos {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* la 1ere liste du footer (tel, adresse...) */
+footer .logistic-data {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .logistic-data div {
+    margin: 1.2rem 0;
+}
+
+footer .logistic-data address {
+    display: inline;
+    font-style: unset;
+    cursor: pointer;
+}
+
+footer .logistic-data a {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+footer .logistic-data i {
+    margin-right: 1.7rem;
+    font-size: 2rem;
+    color: var(--icon-color);
+}
+
+
+footer i:hover {
+    color: var(--main-color);
+}
+
+footer iframe {
+    width: 30rem;
+    height: 20rem;
+}
+
+/* la liste des autres pages dans le footer (n'existent pas encore) */
+footer .legal-mentions p {
+    cursor: pointer;
+}
+
+footer .footer-infos:hover {
+    color: var(--main-color)
+}
+
+/* les icônes des réseaux sociaux */
+footer .network {
+    display: flex;
+}
+
+footer .network i {
+    font-size: 3rem;
+    margin-top: 1.7rem;
+    margin-left: 2rem;
+}
+
+footer .network i:active {
+    transform: scale(0.9);
+}
+
+footer .copyright {
+    position: relative;
+    margin-top: 5rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* le ligne horizontale dans le footer */
+footer .copyright::before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: 0.1em;
+    background-color: var(--text-color);
+}
+
+/* la flèche pour retourner en haut de la page */
+#to-top {
+    font-size: 1.7em;
+    position: absolute;
+    left: 50%;
+    top: -2.5rem;
+}
+
+#to-top:hover {
+    color: var(--main-color)
+}
+
+
+/* ............................................. */
+/* ...............  MEDIA QUERIES .............. */
+/* ...............  MID SCREENS ................ */
+/* ............................................. */
+
+
+@media screen and (min-width: 50em) {
+
+    header {
+        display: grid;
+        grid-template-columns: .5fr 6fr 1fr;
+    }
+
+
+    .header-logo img {
+        display: block;
+        width: 4em;
+        padding-left: 1em;
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* parent du ::after qui est lui en position absolute : pour qu'il se déplace par rapport à lui */
+    header li a {
+        position: relative;
+    }
+
+    /* barre qui s'affiche progressivement en-dessous des liens (sauf la plume) */
+    header a:not(.header-logo)::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background: var(--main-color);
+        position: absolute;
+        bottom: -0.2em;
+        left: 0;
+        transition: 0.2s ease-in;
+    }
+
+    /* au hover la barre aura un width qui passera de 0% à 100% en 0.2s */
+    header a:hover::after {
+        width: 100%
+    }
+
+
+    main {
+        padding: 10em 2em 0;
+    }
+
+    /* les images ou paragraphes absents sur mobile réapparaissent sur moyens et grands écrans */
+    .notOnMobile {
+        display: block;
+    }
+
+    .tricks {
+        height: auto;
+        flex-direction: row;
+    }
+
+    .blogs article {
+        margin: unset;
+        max-width: 65%;
+    }
+
+    /* pour alterner les articles à gauche et à droite
+        (dans un contenaire flex, mettre sur auto la marge où l'on veut placer tout l'espace
+    */
+    .blogs article:nth-of-type(2n) {
+        margin-left: auto;
+    }
+
+    form {
+        width: 40%;
+    }
+
+    .about {
+        flex-direction: row;
+        margin: 1rem;
+    }
+
+    .about img {
+        min-width: 45%;
+        margin: 2rem;
+    }
+}
+
+
+/* ............................................. */
+/* ...............  MEDIA QUERIES .............. */
+/* ...............  BIG SCREENS ................ */
+/* ............................................. */
+
+
+@media screen and (min-width: 70em) {
+
+    footer .main-infos {
+        flex-direction: row;
+    }
+
+    footer .network {
+        flex-direction: column;
+    }
+
+}
+
+
+/* ............................................. */
+/* .................  DARK MODE  ............... */
+/* ............................................. */
+
+/* placer puis masquer la checkbox */
+.darkMode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* ajouter l'icône par-dessus la checkbox */
+.darkMode-btn::before {
+    content: "";
+    background: url('img/black-moon.png');
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1.6rem;
+    right: 2px;
+    font-size: 3rem;
+    color: rgb(59, 59, 59)
+}
+
+/* changer l'icône quand on clique dessus */
+.darkMode-btn:checked::before {
+    background: url('img/sun.png');
+}
+
+/* si la page contient cette checkbox cochée
+    on change le contenu des variables de couleur
+*/
+:root:has(.darkMode-btn:checked) {
+    --text-color: #f5f5f5;
+    --bg-color: #252525;
+}
+
+
